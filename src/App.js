@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
 
         <Header/>
 
-        <p>CONTENT</p>
-        <p>CONTENT</p>
-        <p>CONTENT</p>
+        <Search />
 
       </div>
 

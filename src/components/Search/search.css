@@ -1,0 +1,28 @@
+form {
+    width: 100%;
+    padding:  15px 15px 15px 40px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+form.dark {
+    background-color: var(--blueLight);
+}
+form.light {
+    background-color: var(--white);
+}
+
+form input {
+    flex: 1;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: var(--gray);
+}
+
+form button {
+    background-color: var(--blue);
+}
