@@ -1,0 +1,31 @@
+.counters {
+    display: flex;
+    justify-content: space-between;
+    align-itens: center;
+    padding: 20px 55px;
+    border-radius: 15px;
+
+}
+
+.counters.dark {
+    background-color: var(--blueDark);
+}
+.counters.light {
+    background-color: var(--light);
+}
+
+.counters-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.counters-item span {
+    color: var(--gray);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.counters-item h3 {
+    font-size: 1.5em;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import './card.css';
 import CardHeader from './Header';
+import Counters from './Counters';
+import FooterCard from './Footer';
 
 const Card = () => {
   return (
@@ -17,9 +19,9 @@ const Card = () => {
 
             <p className='bio'>bio</p>
 
-            <div>counters</div>
+            <Counters />
 
-            <footer>footer</footer>
+            <FooterCard />
 
         </main>
         
