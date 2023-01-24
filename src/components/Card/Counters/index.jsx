@@ -1,9 +1,13 @@
 import React from 'react';
 import './counters.css';
+import { useTheme } from '../../../contexts/themeContext';
 
 const Counters = () => {
+
+  const { theme } = useTheme();
+
   return (
-    <div className='counters dark'>
+    <div className={`counters ${theme}`}>
         
         <div className='counters-item'>
             <span>Repositorios</span>
