@@ -1,10 +1,13 @@
 import './header.css';
 import { useState } from 'react';
 import months from './months.jsx';
+import { useEffect } from 'react';
 
-const CardHeader = () => {
+const CardHeader = ({ name, username, link, createdAt }) => {
 
     const [ date, setDate ] = useState(new Date())
+
+    useEffect(() =>  setDate(new Date(createdAt)) ,[createdAt])
 
     return (
         <header className='card-header'>
@@ -12,11 +15,11 @@ const CardHeader = () => {
             <a 
             target='_blank'
             rel='noreferrer'
-            href="#"
+            href={link}
             className='username'
             >
-                <h3>Joao pedro</h3>
-                <h2>@joapd</h2>
+                <h3> { name } </h3>
+                <h2>@{ username }</h2>
 
             </a>
 

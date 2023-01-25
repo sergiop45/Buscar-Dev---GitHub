@@ -2,7 +2,7 @@ import React from 'react';
 import './counters.css';
 import { useTheme } from '../../../contexts/themeContext';
 
-const Counters = () => {
+const Counters = ({ followers, repos, following }) => {
 
   const { theme } = useTheme();
 
@@ -11,17 +11,17 @@ const Counters = () => {
         
         <div className='counters-item'>
             <span>Repositorios</span>
-            <h3>59</h3>
+            <h3>{ repos }</h3>
         </div>
 
         <div className='counters-item'>
             <span>Fowllowers</span>
-            <h3>12</h3>
+            <h3> { followers } </h3>
         </div>
 
         <div className='counters-item'>
             <span>Following</span>
-            <h3>23</h3>
+            <h3>{ following }</h3>
         </div>
         
     </div>

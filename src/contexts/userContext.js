@@ -19,14 +19,14 @@ export function UserProvider({ children }) {
     const [twitter, setTwitter] = useState('');
     const [username, setUsername] = useState('');
 
+    const [status, setStatus] = useState('Pesquise por um usuario!');
+
     function searchUser(name) {
 
         api.get('/users/' + name)
         .then(dados => {
 
             const { data } = dados;
-            console.log(data)
-            console.log(data.bio)
             setAvatar(data.avatar_url);
             setBio(data.bio);
             setBlog(data.blog);
@@ -38,8 +38,10 @@ export function UserProvider({ children }) {
             setName(data.name);
             setLocal(data.location);
             setRepos(data.public_repos);
-            setTwitter(data.twitter);
+            setTwitter(data.twitter_username);
             setUsername(data.login);
+            console.log(status)
+            setStatus('');
 
         })
         .catch(err => console.log('erro: ' + err)) 
@@ -52,7 +54,7 @@ export function UserProvider({ children }) {
             avatar, bio, blog, company,
             createdAt, followers, following,
             linkProfile, name, local,
-            repos, twitter, username
+            repos, twitter, username, status,
          } }>
             { children }
         </UserContext.Provider>

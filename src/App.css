@@ -24,3 +24,9 @@
     gap: 30px;
 }
 
+.status {
+    margin-top: 1em;
+    color: var(--gray);
+    text-align: center;
+}
+
