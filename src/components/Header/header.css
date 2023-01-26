@@ -21,3 +21,8 @@ header button {
 
     gap: 15px;
 }
+
+header span {
+    color: var(--white);
+    font-weight: bold;
+}

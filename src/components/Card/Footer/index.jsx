@@ -4,20 +4,20 @@ import Item from './item';
 import { FaMapMarkerAlt, FaLink,
          FaTwitter, FaBuilding } from 'react-icons/fa';
 
-export default function FooterCard () {
+export default function FooterCard ({ blog, twitter, local, company }) {
     return (
         <footer className='footer-card'>
 
             <section>
                 
-                <Item title='Recife'> 
+                <Item title={local}> 
                     <FaMapMarkerAlt
                      size={18} 
                      color='inherit'
                       />
                 </Item>
 
-                <Item title='Youtube' link='#'> 
+                <Item title={blog} link='#'> 
                     <FaLink
                      size={18} 
                      color='inherit'
@@ -28,14 +28,14 @@ export default function FooterCard () {
 
             <section>
                 
-                <Item title='Twitter' link='#'> 
+                <Item title={twitter} link={`https://twitter.com/${twitter}`}> 
                     <FaTwitter
                      size={18} 
                      color='inherit'
                       />
                 </Item>
 
-                <Item title='Kenlo' link='#'> 
+                <Item title={company} > 
                     <FaBuilding
                      size={18} 
                      color='inherit'

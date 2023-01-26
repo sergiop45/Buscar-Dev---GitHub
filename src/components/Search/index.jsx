@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 import './search.css';
 import { FaSearch } from 'react-icons/fa';
+import { useTheme } from '../../contexts/themeContext';
+import { useUser } from '../../contexts/userContext';
 
 const Search = () => {
 
     const [ user, setUser ] = useState('');
+    const { theme } = useTheme();
+    const { searchUser } = useUser();
+
+  function handleSubmit(e) {
+    
+    e.preventDefault();
+    searchUser(user);
+    setUser('');
+
+  }
 
   return (
-    <form className='dark'>
+    <form className={theme} onSubmit={handleSubmit}>
 
         <FaSearch size={28} color='var(--blue)'/>
         <input
@@ -16,7 +28,7 @@ const Search = () => {
         value={user}
         onChange={e => setUser(e.target.value)}
         />
-        <button>Buscar</button>
+        <button >Buscar</button>
 
     </form>
   )
